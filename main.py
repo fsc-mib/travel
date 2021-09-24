@@ -7,20 +7,19 @@ Created on Thu Feb  4 15:33:29 2021
 """
 import argparse
 from pathlib import Path
-from VeSeg.travel_v2 import travel_nora
+from VeSeg.travel_v3 import travel_nora
 
-pth_in = '/media/sf_fsc/act/200728_LuHis/dat/SegTest/Thorax_1_0_I26f_3_s005.nii'
-pth_ext_msk = '/media/sf_fsc/act/200728_LuHis/dat/SegTest/thorax_pred.nii.gz'
-pth_trachea = '/media/sf_fsc/act/200728_LuHis/dat/SegTest/01_trachea.nii.gz'
-pth_vessel = '/media/sf_fsc/act/200728_LuHis/dat/SegTest/01_vessels.nii.gz'
+'''
+consider the use of the function travel instead of travel_nora
+'''
 
-acc_nr = ['28661736','28437204','28559098','27010158','28818912','26906063','27010158','26906063','26514851', '25818090', '25583696', '25782823']
-pth_in = '/media/sf_fsc/act/200728_LuHis/dat/SegTestExt/' + acc_nr[0] + '/WT1.nii'
-pth_out = '/media/sf_fsc/act/200728_LuHis/dat/SegTestExt/'+ acc_nr[0] +'/'
-pth_ext_msk = pth_out + 'thorax_pred.nii.gz'
+#example paths
+pth = '/media/sf_fsc/act/200728_LuHis/dat/nrm/24106972/'
+pth_in = pth + 'WT1.nii'
+pth_ext_msk = pth + 'thorax_pred.nii.gz'
+pth_trachea = pth + 'trachea.nii.gz'
+pth_vessel = pth + 'vessels.nii.gz'
 
-pth_trachea = '/media/sf_fsc/act/200728_LuHis/dat/SegTestExt/' + acc_nr[0] + '/trachea.nii.gz'
-pth_vessel = '/media/sf_fsc/act/200728_LuHis/dat/SegTestExt/' + acc_nr[0] + '/vessels.nii.gz'
 
 def main():
     
